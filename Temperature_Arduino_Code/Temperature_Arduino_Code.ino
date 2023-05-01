@@ -1,8 +1,6 @@
 #include <Adafruit_MLX90614.h>
 #include <ESP8266WiFi.h>
 #include <ThingSpeak.h>
-long myChannelNumber = 2108652;
-const char myWriteAPIKey[] = "7TL3I8UCM99A5RH3";
 WiFiClient client;
 int buzzer=D5;
 
@@ -10,7 +8,7 @@ Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 
 void setup() {
   pinMode (buzzer,OUTPUT);
-  WiFi.begin("Galaxy F23","zlqv89pr");
+  WiFi.begin("wifiName","password");
   while(WiFi.status() !=WL_CONNECTED)
   {
     delay(100);
